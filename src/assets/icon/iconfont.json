@@ -1,0 +1,114 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "203791",
+      "name": "疫苗",
+      "font_class": "yimiao",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "417374",
+      "name": "健康评测-icon",
+      "font_class": "jiankangpingceicon",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "418539",
+      "name": "销售统计",
+      "font_class": "xiaoshoutongji",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
+      "icon_id": "1253384",
+      "name": "心理健康科",
+      "font_class": "xinlijiankangke",
+      "unicode": "e8ab",
+      "unicode_decimal": 59563
+    },
+    {
+      "icon_id": "2336081",
+      "name": "财务管理",
+      "font_class": "caiwuguanli",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "2902557",
+      "name": "健康档案",
+      "font_class": "jiankangdangan",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "4674128",
+      "name": "统计分析",
+      "font_class": "tongjifenxi",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "6072958",
+      "name": "用户管理",
+      "font_class": "yonghu",
+      "unicode": "e6b4",
+      "unicode_decimal": 59060
+    },
+    {
+      "icon_id": "7348776",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e694",
+      "unicode_decimal": 59028
+    },
+    {
+      "icon_id": "8091359",
+      "name": "知识管理",
+      "font_class": "zhishiguanli",
+      "unicode": "e6df",
+      "unicode_decimal": 59103
+    },
+    {
+      "icon_id": "8292866",
+      "name": "产品设置",
+      "font_class": "chanpinshezhi",
+      "unicode": "e648",
+      "unicode_decimal": 58952
+    },
+    {
+      "icon_id": "8722306",
+      "name": "消息管理",
+      "font_class": "xiaoxiguanli",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "10390687",
+      "name": "图片管理",
+      "font_class": "tupianguanli",
+      "unicode": "e7d2",
+      "unicode_decimal": 59346
+    },
+    {
+      "icon_id": "14201675",
+      "name": "模板",
+      "font_class": "moban",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "14844265",
+      "name": "接口测试",
+      "font_class": "jiekouceshi",
+      "unicode": "e732",
+      "unicode_decimal": 59186
+    }
+  ]
+}

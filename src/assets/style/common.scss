@@ -1,0 +1,105 @@
+$main-color: #4AC493;
+$back-color: #E4E4E4;
+
+.clear-fix::after { content: ''; display: block; clear: both; visibility: hidden; height: 0; }
+.f-l { float: left; }
+.f-r { float: right; }
+.w-100 { width: 100%; }
+.h-100 { height: 100%; }
+.w-h { width: 100%; height: 100%; }
+.bac-img { background-repeat: no-repeat; background-size: 100% 100%; }
+.n-select { user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; }
+.b-r { border-radius: 5px; }
+.pointer { cursor: pointer; }
+.m-l { margin-left: 4px; }
+.m-r { margin-right: 4px; }
+.m-t { margin-top: 4px; }
+.m-b { margin-bottom: 4px; }
+.m-r-l { margin-right: 8px; }
+.m-r-b { margin-right: 20px; }
+.m-l-b { margin-left: 20px; }
+.m-t-b { margin-top: 20px; }
+.m-b-b { margin-bottom: 20px; }
+.f-s-s { font-size: 12px; }
+.f-s-m { font-size: 14px; }
+.f-s-l { font-size: 16px; }
+.pad { padding: 40px; }
+.n-btn { background-color: $main-color!important; border-color: $main-color!important; }
+.b-b { border-bottom: 1px solid #ebebeb; }
+.page-header { padding: 10px 0; margin-bottom: 20px; border-bottom: 1px solid #E4E4E4; }
+.head {
+  display: flex;
+  align-items: center;
+  span {
+    padding-right: 8px;
+    font-size: 24px;
+    color: #242424;
+    font-weight: bold;
+  }
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* 按钮样式 */
+.a-btn{
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  background: linear-gradient(
+    90deg,#4AC493, #f441a5, #ffeb3b, 
+  #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  border-radius: 60px;
+  background-size: 400%;
+  z-index: 1;
+}
+.a-btn:hover{
+  animation: animate 8s linear infinite alternate;
+}
+@keyframes animate{
+  0%{
+    background-position: 0%;
+  }
+  50%{
+    background-position: 100%;
+  }
+  100%{
+    background-position: 0%;
+  }
+}
+.a-btn::before{
+  content: '';
+  position: absolute;
+  top:-5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  z-index: -1; 
+  background: linear-gradient(
+    90deg,#4AC493, #f441a5, #ffeb3b, #03a9f4, 
+  #f441a5, #ffeb3b, #03a9f4);
+  border-radius: 40px;
+  background-size: 400%;
+  filter: blur(20px);
+  opacity: 0;
+  transition: 1s;
+}
+.a-btn:hover::before{
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
+}
+*::selection {
+  color: #4AC493!important;
+  background-color: #222222;
+}

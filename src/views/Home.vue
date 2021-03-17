@@ -16,25 +16,27 @@
         <div class="page2_child1">
           <transition name="el-zoom-in-center">
             <div v-show="isShow" class="transition-box">
-              <button @click="editPicture">1111</button>
+              <button @click="editPicture">editPicture</button>
             </div>
           </transition>
+<!--          上面这个不要了-->
         </div>
         <div class="page2_child2">
           <transition name="el-zoom-in-center">
             <div v-show="isShow" class="transition-box">
-              <button @click="editVedio">222</button>
+              <button @click="editVedio">editVedio</button>
             </div>
           </transition>
         </div>
+<!--        这两个不要了-->
       </div>
       <div class="page2_left">
         <div>
           <h1>具有专业功能的免费在线视频编辑器</h1>
           <p>加入200多个国家/地区的1300万创意用户，无需任何编辑经验。</p>
-          <button class="page2_btn01">111</button>
-          <button class="page2_btn02">222</button>
-          <button class="page2_btn03">333</button>
+          <button class="page2_btn01" @click="editVedio">111</button>
+          <button class="page2_btn02" @click="editVedio">222</button>
+          <button class="page2_btn03" @click="editVedio">333</button>
         </div>
       </div>
       <div class="page2_right"></div>
@@ -62,7 +64,6 @@ import Carousel from "../components/Carousel";
 import tabBar from "../components/tabBar";
 import VideoPlayer from "../components/VideoPlayer";
 import CarouselItem from "../components/CarouselItem";
-
 
 export default {
   name: 'Home',
@@ -93,7 +94,7 @@ export default {
     },
     editVedio() {
       this.$router.push({path: '/editVedio'})
-      // this.index = 2
+      // this.index =
     },
 
     beforeUploadVideo(file) {

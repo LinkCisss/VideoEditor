@@ -5,6 +5,7 @@ import Layout from "../views/Layout";
 import About from "../views/About";
 import EditPicture from "../views/EditPicture";
 import EditVedio from "../views/EditVedio";
+import CutVideo from "../views/CutVideo";
 
 
 Vue.use(VueRouter)

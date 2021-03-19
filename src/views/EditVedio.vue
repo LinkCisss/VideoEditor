@@ -103,7 +103,11 @@
               action="#"
               list-type="picture-card"
               :auto-upload="false"
-              @click="clickUpload">
+              :drag="true"
+              :on-success="clickUpload"
+              :on-progress="uploading"
+              :on-error="uploadErr"
+          >
             <i slot="default" class="el-icon-plus"></i>
             <div slot="file" slot-scope="{file}">
               <img
@@ -111,27 +115,35 @@
                   :src="file.url" alt=""
               >
               <span class="el-upload-list__item-actions">
-        <span
-            class="el-upload-list__item-preview"
-            @click="handlePictureCardPreview(file)"
-        >
+                <span
+                    class="el-upload-list__item-preview"
+                    @click="handlePictureCardPreview(file)"
+                >
           <i class="el-icon-zoom-in"></i>
         </span>
-        <span
+                <span
+                    v-if="!disabled"
+                    class=""
+                    @click="handleEdit(file)"
+                >
+          <i class="el-icon-edit"></i>
+        </span>
+                <span
             v-if="!disabled"
             class="el-upload-list__item-delete"
             @click="handleDownload(file)"
         >
           <i class="el-icon-download"></i>
         </span>
-        <span
+                <span
             v-if="!disabled"
             class="el-upload-list__item-delete"
             @click="handleRemove(file)"
         >
           <i class="el-icon-delete"></i>
         </span>
-      </span>
+              </span>
+
             </div>
           </el-upload>
           <el-dialog :visible.sync="dialogVisible">
@@ -198,14 +210,34 @@ export default {
     handleDownload(file) {
       console.log(file);
     },
+    handleEdit(file){
+      this.$router.push({
+        path: '/cutVideo'
+      })
+    },
     //点击上传
-    clickUpload(){
+    clickUpload() {
       this.$router.push(
           {
-            path: '/cutVideos'
+            path: '/cutVideo'
           }
       )
+    },
+    uploading() {
+      this.$message({
+        showClose: true,
+        message: '在上传啦♪(^∇^*)',
+        type: 'warning'
+      })
+    },
+    uploadErr(){
+      this.$message({
+        showClose: true,
+        message: '上传失败，请检查网络设置 x_x ',
+        type: 'error'
+      })
     }
+
   }
 }
 
@@ -460,10 +492,11 @@ export default {
         font-weight: bold;
       }
     }
-    //上传区
-    .videos-content_upload{
 
-      .el-upload--picture-card{
+    //上传区
+    .videos-content_upload {
+
+      .el-upload--picture-card {
         width: 533px;
         height: 300px;
         display: flex;

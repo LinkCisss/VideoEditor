@@ -102,7 +102,8 @@
           <el-upload
               action="#"
               list-type="picture-card"
-              :auto-upload="false">
+              :auto-upload="false"
+              @click="clickUpload">
             <i slot="default" class="el-icon-plus"></i>
             <div slot="file" slot-scope="{file}">
               <img
@@ -145,7 +146,6 @@
       ></div>
 
     </div>
-
 
   </div>
 </template>
@@ -197,6 +197,14 @@ export default {
     },
     handleDownload(file) {
       console.log(file);
+    },
+    //点击上传
+    clickUpload(){
+      this.$router.push(
+          {
+            path: '/cutVideos'
+          }
+      )
     }
   }
 }

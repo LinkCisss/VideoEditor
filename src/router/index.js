@@ -29,6 +29,11 @@ const routes = [
     path: '/editVedio',
     name: 'EditVedio',
     component: EditVedio,
+  },
+  {
+    path: '/cutVideo',
+    name: 'CutVideo',
+    component: CutVideo,
   }
   // {
   //   path: '/',
@@ -43,7 +48,7 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  mode: 'hash',
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 })

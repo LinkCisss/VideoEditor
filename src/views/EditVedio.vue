@@ -55,9 +55,8 @@
     </div>
 
     <!--  ----------------------右侧内容区---------------------  -->
-    <!--  搜索区 -->
     <div class="right-content">
-
+      <!--  搜索区 -->
       <div class="search">
         <div>
           <input
@@ -73,7 +72,7 @@
               v-model="value2"
               :colors="colors">
           </el-rate>
-          <button type="primary" round>
+          <button type="primary" round @click="handleEdit">
             <i class="el-icon-plus"></i>
             <span>Create a video</span>
           </button>

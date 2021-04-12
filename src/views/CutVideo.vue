@@ -40,6 +40,19 @@
           <i class="el-icon-setting"></i>
           <span slot="title">导航四</span>
         </el-menu-item>
+        <el-menu-item index="5">
+          <i class="el-icon-setting"></i>
+          <span slot="title">5555</span>
+        </el-menu-item>
+        <el-menu-item index="6">
+          <i class="el-icon-setting"></i>
+          <span slot="title">6666</span>
+        </el-menu-item>
+        <el-menu-item index="7">
+          <i class="el-icon-setting"></i>
+          <span slot="title">7777</span>
+        </el-menu-item>
+        
       </el-menu>
     </div>
     <!--操作区-->
